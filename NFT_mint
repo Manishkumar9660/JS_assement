@@ -1,0 +1,57 @@
+/*
+Assessment Requirements
+1. Create a variable that can hold a number of NFT's. What type of variable might this be?
+2. Create an object inside your mintNFT function that will hold the metadata for your NFTs. 
+   The metadata values will be passed to the function as parameters. When the NFT is ready, 
+   you will store it in the variable you created in step 1
+3. Your listNFTs() function will print all of your NFTs metadata to the console (i.e. console.log("Name: " + someNFT.name))
+4. For good measure, getTotalSupply() should return the number of NFT's you have created
+*/
+
+// create a variable to hold your NFT's
+let NFTs = [];
+// this function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+function mintNFT (name , weight , power , moves , wining_matches) {
+    let NFT = {
+        name: name,
+        weight: weight,
+        power: power,
+        moves: moves,
+        wining_matches: wining_matches,
+    }
+    NFTs.push(NFT);
+    
+
+}
+
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs () {
+    for (let i = 0; i < NFTs.length; i++) {
+        console.log("\n\n_____________________ Wrestling_card  _________________________\n\n" );
+        console.log("Name: " + NFTs[i].name);
+        console.log("Weight: " + NFTs[i].weight);
+        console.log("Power " + NFTs[i].power);
+        console.log("Moves " + NFTs[i].moves);
+        console.log("Wining_matches: " + NFTs[i].wining_matches);
+        console.log("\n\n_____________________* * * * *_________________________\n" );
+    }
+}
+
+// print the total number of NFTs we have minted to the console
+function getTotalSupply() {
+    console.log("\n" + NFTs.length);
+
+}
+
+// call your functions below this line
+mintNFT("Roman Reigns",100,150,"Spear");
+mintNFT("Undertaker",120,160,"Chokeslam");
+mintNFT("TripleH",140,170,"Kurt Angle");
+mintNFT("John Cena",120,156,"Knuckle");
+mintNFT("Randy Orton",101,120,"DDT");
+
+listNFTs();
+getTotalSupply();
