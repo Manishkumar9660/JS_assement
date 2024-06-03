@@ -31,10 +31,10 @@ function mintNFT (name , weight , power , moves , wining_matches) {
 function listNFTs () {
     for (let i = 0; i < NFTs.length; i++) {
         console.log("\n\n_____________________ Wrestling_card  _________________________\n\n" );
-        console.log("Name: " + NFTs[i].name);
-        console.log("Weight: " + NFTs[i].weight);
-        console.log("Power " + NFTs[i].power);
-        console.log("Moves " + NFTs[i].moves);
+        console.log("Name:\t\t" + NFTs[i].name);
+        console.log("Weight:\t\t" + NFTs[i].weight);
+        console.log("Power: \t\t" + NFTs[i].power);
+        console.log("Moves: \t\t" + NFTs[i].moves);
         console.log("Wining_matches: " + NFTs[i].wining_matches);
         console.log("\n\n_____________________* * * * *_________________________\n" );
     }
@@ -47,11 +47,12 @@ function getTotalSupply() {
 }
 
 // call your functions below this line
-mintNFT("Roman Reigns",100,150,"Spear");
-mintNFT("Undertaker",120,160,"Chokeslam");
-mintNFT("TripleH",140,170,"Kurt Angle");
-mintNFT("John Cena",120,156,"Knuckle");
-mintNFT("Randy Orton",101,120,"DDT");
+mintNFT("Roman Reigns",100,150,"Spear",40);
+mintNFT("Undertaker",120,160,"Chokeslam",54);
+mintNFT("TripleH",140,170,"Kurt Angle",40);
+mintNFT("John Cena",120,156,"Knuckle",55);
+mintNFT("Randy Orton",101,120,"DDT",45);
 
 listNFTs();
 getTotalSupply();
+
